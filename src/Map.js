@@ -1,3 +1,4 @@
+import { MapOutlined } from '@mui/icons-material'
 import React from 'react'
 
 function Map() {
@@ -8,4 +9,4 @@ function Map() {
   )
 }
 
-export default Map
+export default Map;

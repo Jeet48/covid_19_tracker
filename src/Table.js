@@ -16,5 +16,3 @@ function Table({countries}) {
 }
 
 export default Table;
-
-
