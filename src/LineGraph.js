@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import numeral from "numeral";
 import Chart from 'chart.js/auto';
-import { fontSize } from "@mui/system";
 
 const options = {
   legend: {
@@ -31,19 +30,17 @@ const options = {
           format: "MM/DD/YY",
           tooltipFormat: "ll",
         },
-       
       },
     ],
     yAxes: [
       {
         gridLines: {
-          display: true,
+          display: false,
         },
         ticks: {
           // Include a dollar sign in the ticks
           callback: function (value, index, values) {
             return numeral(value).format("0a");
-            
           },
         },
       },
@@ -72,7 +69,7 @@ function LineGraph({ casesType }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=100")
+      await fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=120")
         .then((response) => {
           return response.json();
         })
@@ -89,7 +86,7 @@ function LineGraph({ casesType }) {
 
   return (
     <div>
-      {data && data.length > 0 && (
+      {data?.length > 0 && (
         <Line
           data={{
             datasets: [
