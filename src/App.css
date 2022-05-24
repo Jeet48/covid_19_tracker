@@ -2,6 +2,9 @@
   margin: 0;
 }
 
+
+
+
 body {
   background-color: #f5f6fa;
 }
@@ -11,6 +14,7 @@ body {
   justify-content: space-evenly;
   background-color: #f5f6fa;
   padding: 20px;
+  background-color: #DDFFBC;
 }
 
 .app__dropdown {
@@ -25,7 +29,7 @@ body {
 }
 
 .app__header > h1 {
-  color: #fc3c3c;
+  color: black;
   font-size: 2rem;
 }
 
@@ -53,4 +57,8 @@ body {
   .app {
     flex-direction: column;
   }
+}
+
+h3{
+  background-color: bisque;
 }

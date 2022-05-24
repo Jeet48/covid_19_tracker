@@ -14,6 +14,10 @@ import { sortData, prettyPrintStat } from "./util";
 import numeral from "numeral";
 import Map from "./Map";
 import "leaflet/dist/leaflet.css";
+import TimelineIcon from '@mui/icons-material/Timeline';
+import BubbleChartTwoToneIcon from '@mui/icons-material/BubbleChartTwoTone';
+import DiscountOutlinedIcon from '@mui/icons-material/DiscountOutlined';
+import FiberNewOutlinedIcon from '@mui/icons-material/FiberNewOutlined';
 
 const App = () => {
   const [country, setInputCountry] = useState("worldwide");
@@ -75,7 +79,7 @@ const App = () => {
     <div className="app">
       <div className="app__left">
         <div className="app__header">
-          <h1>COVID-19 Tracker</h1>
+          <h1> COVID-19 Tracker &nbsp;<TimelineIcon fontSize="large"/></h1>
           <FormControl className="app__dropdown">
             <Select
               variant="outlined"
@@ -114,6 +118,7 @@ const App = () => {
             total={numeral(countryInfo.deaths).format("0.0a")}
           />
         </div>
+        <h1>MAP &nbsp;<BubbleChartTwoToneIcon fontSize="large"/></h1>
         <Map
           countries={mapCountries}
           casesType={casesType}
@@ -124,9 +129,9 @@ const App = () => {
       <Card className="app__right">
         <CardContent>
           <div className="app__information">
-            <h3>Live Cases by Country</h3>
+            <h3>Live Cases by Country<DiscountOutlinedIcon fontSize="large"/></h3>
             <Table countries={tableData} />
-            <h3>Worldwide new {casesType}</h3>
+            <h3>Worldwide new {casesType}<FiberNewOutlinedIcon  fontSize="large"/></h3>
             <LineGraph casesType={casesType} />
           </div>
         </CardContent>
