@@ -30,7 +30,7 @@ Your app is ready to be deployed!
 # `Deployed Site`
 
 
-https://elegant-chebakia-5b130b.netlify.app/
+https://polite-daifuku-7dde64.netlify.app/
 
 
 
